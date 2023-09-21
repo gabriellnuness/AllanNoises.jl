@@ -1,17 +1,13 @@
 module AllanFit
 
 
+    export allan_fit
 
-using LinearSolve
-
-
-
-export allan_fit
+    using LinearAlgebra
+    using LinearSolve
 
 
-
-include("allan_fit.jl")
-
+    include("allan_fit.jl")
 
 
 end # module AllanFit
