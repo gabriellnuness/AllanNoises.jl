@@ -2,11 +2,12 @@ module AllanNoises
 
 
     export allan_fit
+    export allan_fit_simple
 
     using LinearAlgebra
     using LinearSolve
 
-    include("allan_fit.jl")
+    include("fittings.jl")
 
 
 end # module AllanNoises
