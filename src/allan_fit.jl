@@ -5,8 +5,7 @@
  Calculate the sensor noise parameters/coefficients from the 
  Allan Variance data using Weighted Linear Regression
 
-  
- Fitted Allan deviation noise values:
+Fitted Allan deviation noise values:
 
  C = avar_fit
  unit = measurement unit in SI
@@ -35,7 +34,6 @@ function allan_fit(taus::Array{Float64}, adev::Array{Float64})
     avar_fit = solve(prob)
 
     # Check non trustable values from fit
-    avar_fit_original = avar_fit
     for i in eachindex(avar_fit) 
         if avar_fit[i] < 0
             avar_fit[i] = 0
@@ -49,8 +47,8 @@ function allan_fit(taus::Array{Float64}, adev::Array{Float64})
     rrw  = (3*avar_fit[4])^(0.5)                    # C = K^2 /3
     rr   = (2*avar_fit[5])^(0.5)                    # C = R^2 / 2
 
-    avar_fit_original = sqrt.(avar_fit_original'*T')
-    avar_fit_original = avar_fit_original[1,:]
+    avar_fit = sqrt.(avar_fit'*T')
+    avar_fit = avar_fit[1,:]
 
-    return (avar_fit_original, Q, arw, bias, rrw, rr)
+    return (avar_fit, Q, arw, bias, rrw, rr)
 end

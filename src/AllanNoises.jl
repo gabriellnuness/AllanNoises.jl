@@ -1,4 +1,4 @@
-module AllanFit
+module AllanNoises
 
 
     export allan_fit
@@ -6,8 +6,7 @@ module AllanFit
     using LinearAlgebra
     using LinearSolve
 
-
     include("allan_fit.jl")
 
 
-end # module AllanFit
+end # module AllanNoises
