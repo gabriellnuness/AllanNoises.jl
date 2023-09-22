@@ -5,7 +5,7 @@ Package to simulate an IMU signal and extract the noise values from an Allan dev
 
 ### Example
 ``` julia
-using AllanNoises, AllanDeviations
+using AllanNoises, AllanDeviations, Random
 
 Random.seed!(3)
 # creating signal
