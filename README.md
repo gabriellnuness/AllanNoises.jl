@@ -1,5 +1,7 @@
 # AllanNoises.jl
 
+[![CI](https://github.com/gabriellnuness/AllanNoises.jl/actions/workflows/ci.yml/badge.svg)](https://github.com/gabriellnuness/AllanNoises.jl/actions/workflows/ci.yml)
+
 Package to simulate an IMU signal and extract the noise values from an Allan deviation log-log plot.
 
 
