@@ -24,7 +24,7 @@ noises_simp = allan_fit_simple(adev.tau, adev.deviation)
 
 ```
 
-`allan_fit()` and `allan_fit_simple()` provides the following outputs:
+`allan_fit()` and `allan_fit_simple()` provide the following outputs:
 
 ![image](doc/fit1.svg)
 ![image](doc/fit2.svg)
